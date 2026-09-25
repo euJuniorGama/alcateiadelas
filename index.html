@@ -168,7 +168,7 @@
   .ja-vivemos{padding:32px;background:var(--creme);border:1px solid var(--line);position:relative;}
   .ja-vivemos .eyebrow{margin-bottom:14px;}
   .ja-lista{display:flex;flex-wrap:wrap;gap:10px 12px;}
-  .ja-lista span{font-size:14px;color:var(--tinta);background:var(--dourado-suave);padding:7px 14px;border-radius:2px;}
+  .ja-lista span{font-size:14px;color:var(--tinta);background:var(--dourado-suave);padding:7px 14px;border-radius:99px;}
 
   .agenda-panel{padding:0;background:transparent;}
   .agenda-panel .eyebrow{color:var(--vinho);margin-bottom:16px;}
@@ -179,12 +179,16 @@
   .agenda-mes-coral{background:var(--coral);color:var(--creme);}
   .agenda-mes-ouro{background:var(--ouro);color:var(--vinho-preto);}
   .agenda-month{font-family:'Fraunces';font-size:24px;font-weight:600;font-variation-settings:'opsz' 9;letter-spacing:0;margin-bottom:14px;}
-  .agenda-ev{padding:10px 0;border-top:1px solid rgba(255,255,255,.28);}
+  .agenda-ev{padding:12px 0;border-top:1px solid rgba(255,255,255,.28);}
   .agenda-mes-ouro .agenda-ev{border-top-color:rgba(44,7,17,.18);}
   .agenda-ev:first-of-type{border-top:none;padding-top:0;}
-  .agenda-ev .tag{display:block;font-size:10.5px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;opacity:.75;margin-bottom:5px;}
+  .agenda-ev .tag{display:block;font-size:10.5px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;opacity:.75;margin-bottom:7px;}
   .agenda-ev .tag.online{text-decoration:underline;opacity:.95;}
-  .agenda-ev p{margin:0;font-family:'Fraunces';font-size:15px;font-style:italic;}
+  .agenda-ev p{
+    display:inline-block;margin:0;font-family:'Jost';font-style:normal;font-weight:700;
+    font-size:13.5px;line-height:1.3;background:var(--creme);color:var(--vinho-preto);
+    padding:8px 16px;border-radius:99px;
+  }
 
   /* ===== DIFERENCIAL ===== */
   .dif-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:8px;}
@@ -453,6 +457,7 @@
           <span>Noite de ioga com pintura de taças</span>
           <span>Palestra de imagem pessoal e posicionamento</span>
           <span>Papo calcinha — saúde íntima</span>
+          <span>Oficina Cápsula do Tempo</span>
         </div>
       </div>
 
