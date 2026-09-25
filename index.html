@@ -222,6 +222,29 @@
   footer a{text-decoration:none;color:rgba(254,252,240,.75);}
   footer a:hover{color:var(--ouro-claro);}
   .footer-fine{margin-top:32px;padding-top:24px;border-top:1px solid var(--line-dark);opacity:.6;}
+
+  /* ===== FAIXA FOTO (banda humanizadora) ===== */
+  .faixa-foto{
+    position:relative;min-height:440px;background-size:cover;background-position:center;
+    display:flex;align-items:center;justify-content:center;overflow:hidden;
+  }
+  .faixa-overlay{
+    position:absolute;inset:0;
+    background:radial-gradient(120% 140% at 15% -10%, rgba(152,30,51,.72) 0%, rgba(93,12,33,.82) 46%, rgba(44,7,17,.9) 100%);
+  }
+  .faixa-conteudo{position:relative;text-align:center;max-width:640px;padding:0 28px;}
+  .faixa-conteudo .eyebrow{justify-content:center;color:var(--dourado-suave);margin-bottom:18px;}
+  .faixa-frase{font-family:'Fraunces';font-style:italic;font-weight:470;font-size:clamp(22px,3.2vw,32px);color:var(--creme);margin:0;line-height:1.35;}
+  @media(max-width:640px){.faixa-foto{min-height:340px;}}
+
+  /* ===== GALERIA (Um pouco do que vivemos) ===== */
+  .galeria-grid{columns:2 240px;column-gap:12px;margin-top:8px;}
+  @media(min-width:720px){.galeria-grid{columns:3 240px;}}
+  @media(min-width:1000px){.galeria-grid{columns:4 240px;}}
+  .galeria-item{break-inside:avoid;margin-bottom:12px;overflow:hidden;border:1px solid var(--line);border-radius:2px;background:var(--creme);}
+  .galeria-item img{display:block;width:100%;height:auto;transition:transform .4s ease;}
+  .galeria-item:hover img{transform:scale(1.045);}
+
 </style>
 
 <!-- ===== NAV ===== -->
@@ -231,6 +254,7 @@
     <nav class="nav-links">
       <a href="#essencia">Essência</a>
       <a href="#vive">Encontros</a>
+      <a href="#galeria">Bastidores</a>
       <a href="#depoimentos">Depoimentos</a>
       <a href="#marcas">Marcas parceiras</a>
       <a href="#contato">Fale conosco</a>
@@ -281,6 +305,14 @@
 </section>
 
 <div class="barra-gradiente"></div>
+
+<div class="faixa-foto" style="background-image:url('assets/galeria/faixa-grupo.jpg');">
+  <div class="faixa-overlay"></div>
+  <div class="container faixa-conteudo">
+    <span class="eyebrow on-dark">Alcateia Delas</span>
+    <p class="faixa-frase">Mulheres que se encontram, se apoiam e crescem juntas — todo mês, presencialmente.</p>
+  </div>
+</div>
 
 <!-- ===== PRA QUEM É ===== -->
 <section class="escura">
@@ -396,6 +428,34 @@
         <h3>Pertencimento de verdade</h3>
         <p>Não é um evento isolado — é uma rede de mulheres que se apoiam e crescem juntas, encontro após encontro.</p>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== UM POUCO DO QUE VIVEMOS (galeria) ===== -->
+<section class="creme-2" id="galeria">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow on-creme">Bastidores</span>
+      <h2>Um pouco do que vivemos.</h2>
+      <p style="margin-top:16px;color:var(--tinta-soft);font-size:16px;max-width:60ch;">Registros dos nossos encontros — rodas de conversa, talks, workshops e momentos que a gente vive juntas, mês após mês.</p>
+    </div>
+    <div class="galeria-grid">
+      <div class="galeria-item"><img src="assets/galeria/galeria-01.jpg" alt="Palestra em encontro presencial da Alcateia Delas" loading="lazy"></div>
+      <div class="galeria-item"><img src="assets/galeria/galeria-02.jpg" alt="Mulher compartilhando sua experiência em encontro da Alcateia Delas" loading="lazy"></div>
+      <div class="galeria-item"><img src="assets/galeria/galeria-03.jpg" alt="Momento de conexão entre participantes da Alcateia Delas" loading="lazy"></div>
+      <div class="galeria-item"><img src="assets/galeria/galeria-04.jpg" alt="Ambientação de encontro da Alcateia Delas" loading="lazy"></div>
+      <div class="galeria-item"><img src="assets/galeria/galeria-05.jpg" alt="Participantes acompanhando encontro da Alcateia Delas" loading="lazy"></div>
+      <div class="galeria-item"><img src="assets/galeria/galeria-06.jpg" alt="Encontro presencial da Alcateia Delas" loading="lazy"></div>
+      <div class="galeria-item"><img src="assets/galeria/galeria-07.jpg" alt="Participante sorrindo em encontro da Alcateia Delas" loading="lazy"></div>
+      <div class="galeria-item"><img src="assets/galeria/galeria-08.jpg" alt="Workshop da Alcateia Delas" loading="lazy"></div>
+      <div class="galeria-item"><img src="assets/galeria/galeria-09.jpg" alt="Participantes atentas em encontro da Alcateia Delas" loading="lazy"></div>
+      <div class="galeria-item"><img src="assets/galeria/galeria-10.jpg" alt="Roda de conversa da Alcateia Delas" loading="lazy"></div>
+      <div class="galeria-item"><img src="assets/galeria/galeria-11.jpg" alt="Encontro da Alcateia Delas" loading="lazy"></div>
+      <div class="galeria-item"><img src="assets/galeria/galeria-12.jpg" alt="Participantes conversando em encontro da Alcateia Delas" loading="lazy"></div>
+      <div class="galeria-item"><img src="assets/galeria/galeria-13.jpg" alt="Material de apoio de encontro da Alcateia Delas" loading="lazy"></div>
+      <div class="galeria-item"><img src="assets/galeria/galeria-14.jpg" alt="Experiência prática em encontro da Alcateia Delas" loading="lazy"></div>
+      <div class="galeria-item"><img src="assets/galeria/galeria-15.jpg" alt="Detalhes de encontro da Alcateia Delas" loading="lazy"></div>
     </div>
   </div>
 </section>
