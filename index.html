@@ -114,6 +114,33 @@
     background:var(--creme-2);border:1px solid var(--line);color:var(--vinho);
   }
 
+  /* ===== LEVEZA / TILES COLORIDOS (proposta) ===== */
+  .chip-a{background:var(--vinho);color:var(--creme);border-color:var(--vinho);}
+  .chip-b{background:var(--coral);color:var(--creme);border-color:var(--coral);}
+  .chip-c{background:var(--ouro);color:var(--vinho-preto);border-color:var(--ouro);}
+  .chip-d{background:var(--dourado-suave);color:var(--vinho-preto);border-color:var(--dourado-suave);}
+  .chip-e{background:var(--vinho-profundo);color:var(--creme);border-color:var(--vinho-profundo);}
+
+  .vive-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:8px;}
+  .vive-card{border-radius:8px;padding:32px 30px;}
+  .vive-card .vive-num{font-family:'Fraunces';font-size:32px;font-weight:340;display:block;margin-bottom:12px;}
+  .vive-card h3{font-size:19px;margin:0 0 10px;}
+  .vive-card p{margin:0;font-size:14.5px;line-height:1.55;}
+  .vive-vinho{background:var(--vinho);color:var(--creme);}
+  .vive-vinho .vive-num{color:var(--ouro-claro);}
+  .vive-vinho p{color:rgba(254,252,240,.82);}
+  .vive-coral{background:var(--coral);color:var(--creme);}
+  .vive-coral .vive-num{color:var(--creme);}
+  .vive-coral p{color:rgba(254,252,240,.9);}
+  .vive-ouro{background:var(--ouro);color:var(--vinho-preto);}
+  .vive-ouro .vive-num{color:var(--vinho);}
+  .vive-ouro p{color:var(--tinta);}
+  .vive-profundo{background:var(--vinho-profundo);color:var(--creme);}
+  .vive-profundo .vive-num{color:var(--dourado-suave);}
+  .vive-profundo p{color:rgba(254,252,240,.82);}
+  @media(max-width:720px){.vive-grid{grid-template-columns:1fr;}}
+
+
   /* ===== PRA QUEM É ===== */
   .quem-list{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line-dark);border:1px solid var(--line-dark);margin-top:8px;}
   @media(max-width:720px){.quem-list{grid-template-columns:1fr;}}
@@ -326,14 +353,14 @@
       <p>Acreditamos que autoconfiança se constrói na prática, não na teoria. Por isso, cada encontro é pensado para tirar você da plateia e colocar você em ação — nunca um grupo que se reúne sem propósito.</p>
       <p style="margin-bottom:28px;">O que buscamos trazer pra sua vida:</p>
       <div class="valores">
-        <span class="chip">Liberdade</span>
-        <span class="chip">Evolução</span>
-        <span class="chip">Identidade</span>
-        <span class="chip">Autenticidade</span>
-        <span class="chip">Confiança</span>
-        <span class="chip">Empoderamento</span>
-        <span class="chip">Desenvolvimento</span>
-        <span class="chip">Repertório</span>
+        <span class="chip chip-a">Liberdade</span>
+        <span class="chip chip-b">Evolução</span>
+        <span class="chip chip-c">Identidade</span>
+        <span class="chip chip-d">Autenticidade</span>
+        <span class="chip chip-e">Confiança</span>
+        <span class="chip chip-a">Empoderamento</span>
+        <span class="chip chip-b">Desenvolvimento</span>
+        <span class="chip chip-c">Repertório</span>
       </div>
     </div>
   </div>
@@ -372,34 +399,26 @@
       <span class="eyebrow on-creme">Plano Encontros</span>
       <h2>O que você vive dentro da Alcateia Delas.</h2>
     </div>
-    <div class="indice">
-      <div class="indice-item">
-        <div class="indice-num">01</div>
-        <div>
-          <h3>Encontro presencial mensal</h3>
-          <p>Toda segunda quinta-feira do mês, aqui em Timbó, num formato que varia: rodas de conversa, talks, palestras, workshops e treinamentos — sempre pensado para criar conexão real.</p>
-        </div>
+    <div class="vive-grid">
+      <div class="vive-card vive-vinho">
+        <span class="vive-num">01</span>
+        <h3>Encontro presencial mensal</h3>
+        <p>Toda segunda quinta-feira do mês, aqui em Timbó, num formato que varia: rodas de conversa, talks, palestras, workshops e treinamentos — sempre pensado para criar conexão real.</p>
       </div>
-      <div class="indice-item">
-        <div class="indice-num">02</div>
-        <div>
-          <h3>Encontro online mensal exclusivo</h3>
-          <p>Toda quarta quinta-feira do mês, pra quem é da comunidade, com um tema aplicável na vida ou nos negócios — de oficina de pitch a papo sobre saúde pessoal financeira e empreendedorismo.</p>
-        </div>
+      <div class="vive-card vive-coral">
+        <span class="vive-num">02</span>
+        <h3>Encontro online mensal exclusivo</h3>
+        <p>Toda quarta quinta-feira do mês, pra quem é da comunidade, com um tema aplicável na vida ou nos negócios — de oficina de pitch a papo sobre saúde pessoal financeira e empreendedorismo.</p>
       </div>
-      <div class="indice-item">
-        <div class="indice-num">03</div>
-        <div>
-          <h3>Comunidade no WhatsApp</h3>
-          <p>Pra manter a conexão viva entre um encontro e outro, e ficar por dentro de todas as novidades e informações do grupo em primeira mão.</p>
-        </div>
+      <div class="vive-card vive-ouro">
+        <span class="vive-num">03</span>
+        <h3>Comunidade no WhatsApp</h3>
+        <p>Pra manter a conexão viva entre um encontro e outro, e ficar por dentro de todas as novidades e informações do grupo em primeira mão.</p>
       </div>
-      <div class="indice-item">
-        <div class="indice-num">04</div>
-        <div>
-          <h3>Coffees, mimos e outras surpresas</h3>
-          <p>A cada encontro presencial, extras pensados pra deixar a experiência ainda mais especial.</p>
-        </div>
+      <div class="vive-card vive-profundo">
+        <span class="vive-num">04</span>
+        <h3>Coffees, mimos e outras surpresas</h3>
+        <p>A cada encontro presencial, extras pensados pra deixar a experiência ainda mais especial.</p>
       </div>
     </div>
 
