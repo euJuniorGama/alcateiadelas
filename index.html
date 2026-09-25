@@ -41,7 +41,7 @@
   .btn{
     display:inline-flex;align-items:center;gap:10px;
     font-family:'Jost';font-weight:600;font-size:15px;
-    padding:15px 30px;border-radius:2px;text-decoration:none;
+    padding:15px 32px;border-radius:999px;text-decoration:none;
     transition:transform .18s ease, box-shadow .18s ease;
     border:1px solid transparent;white-space:nowrap;
   }
@@ -142,11 +142,19 @@
 
 
   /* ===== PRA QUEM É ===== */
-  .quem-list{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line-dark);border:1px solid var(--line-dark);margin-top:8px;}
+  .quem-list{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:8px;}
   @media(max-width:720px){.quem-list{grid-template-columns:1fr;}}
-  .quem-item{background:var(--vinho-preto);padding:34px 32px;}
-  .quem-item p{font-size:18px;font-family:'Fraunces';font-weight:400;font-style:italic;color:var(--creme);margin:0;line-height:1.45;}
-  .quem-item p b{color:var(--ouro-claro);font-weight:600;font-style:normal;}
+  .quem-item{padding:34px 32px;border-radius:8px;}
+  .quem-item p{font-size:18px;font-family:'Fraunces';font-weight:400;font-style:italic;margin:0;line-height:1.45;}
+  .quem-item p b{font-weight:600;font-style:normal;}
+  .quem-vinho{background:var(--vinho);color:var(--creme);}
+  .quem-vinho p b{color:var(--ouro-claro);}
+  .quem-coral{background:var(--coral);color:var(--creme);}
+  .quem-coral p b{color:var(--vinho-preto);}
+  .quem-ouro{background:var(--ouro);color:var(--vinho-preto);}
+  .quem-ouro p b{color:var(--vinho);}
+  .quem-profundo{background:var(--vinho-profundo);color:var(--creme);}
+  .quem-profundo p b{color:var(--dourado-suave);}
 
   /* ===== O QUE VOCÊ VIVE — índice numerado ===== */
   .indice{border-top:1px solid var(--line);}
@@ -162,24 +170,39 @@
   .ja-lista{display:flex;flex-wrap:wrap;gap:10px 12px;}
   .ja-lista span{font-size:14px;color:var(--tinta);background:var(--dourado-suave);padding:7px 14px;border-radius:2px;}
 
-  .agenda-panel{padding:32px;background:var(--vinho-preto);color:var(--creme);}
-  .agenda-panel .eyebrow{color:var(--dourado-suave);margin-bottom:22px;}
-  .agenda-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+  .agenda-panel{padding:0;background:transparent;}
+  .agenda-panel .eyebrow{color:var(--vinho);margin-bottom:16px;}
+  .agenda-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;}
   @media(max-width:560px){.agenda-grid{grid-template-columns:1fr;}}
-  .agenda-month{font-family:'Jost';font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--ouro);margin-bottom:12px;}
-  .agenda-ev{padding:10px 0;border-top:1px solid var(--line-dark);}
+  .agenda-col{border-radius:8px;padding:26px 22px;}
+  .agenda-mes-vinho{background:var(--vinho);color:var(--creme);}
+  .agenda-mes-coral{background:var(--coral);color:var(--creme);}
+  .agenda-mes-ouro{background:var(--ouro);color:var(--vinho-preto);}
+  .agenda-month{font-family:'Fraunces';font-size:24px;font-weight:600;font-variation-settings:'opsz' 9;letter-spacing:0;margin-bottom:14px;}
+  .agenda-ev{padding:10px 0;border-top:1px solid rgba(255,255,255,.28);}
+  .agenda-mes-ouro .agenda-ev{border-top-color:rgba(44,7,17,.18);}
   .agenda-ev:first-of-type{border-top:none;padding-top:0;}
-  .agenda-ev .tag{display:block;font-size:10.5px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:rgba(254,252,240,.5);margin-bottom:5px;}
-  .agenda-ev .tag.online{color:var(--dourado-suave);}
-  .agenda-ev p{margin:0;font-family:'Fraunces';font-size:15px;font-style:italic;color:var(--creme);}
+  .agenda-ev .tag{display:block;font-size:10.5px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;opacity:.75;margin-bottom:5px;}
+  .agenda-ev .tag.online{text-decoration:underline;opacity:.95;}
+  .agenda-ev p{margin:0;font-family:'Fraunces';font-size:15px;font-style:italic;}
 
   /* ===== DIFERENCIAL ===== */
-  .dif-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line-dark);border:1px solid var(--line-dark);margin-top:8px;}
+  .dif-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:8px;}
   @media(max-width:820px){.dif-grid{grid-template-columns:1fr;}}
-  .dif-item{background:var(--vinho-preto);padding:38px 30px;}
-  .dif-item .num{font-family:'Fraunces';font-size:15px;color:var(--ouro);letter-spacing:.06em;}
-  .dif-item h3{font-size:21px;margin:14px 0 10px;color:var(--creme);}
-  .dif-item p{margin:0;color:rgba(254,252,240,.72);font-size:14.5px;}
+  @media(max-width:820px){.dif-grid{grid-template-columns:1fr;}}
+  .dif-item{padding:38px 32px;border-radius:8px;}
+  .dif-item .num{font-family:'Fraunces';font-size:36px;font-weight:600;font-variation-settings:'opsz' 9;letter-spacing:0;display:block;margin-bottom:8px;}
+  .dif-item h3{font-size:21px;margin:6px 0 10px;}
+  .dif-item p{margin:0;font-size:14.5px;}
+  .dif-vinho{background:var(--vinho);color:var(--creme);}
+  .dif-vinho .num{color:var(--ouro-claro);}
+  .dif-vinho p{color:rgba(254,252,240,.82);}
+  .dif-coral{background:var(--coral);color:var(--creme);}
+  .dif-coral .num{color:var(--creme);}
+  .dif-coral p{color:rgba(254,252,240,.9);}
+  .dif-ouro{background:var(--ouro);color:var(--vinho-preto);}
+  .dif-ouro .num{color:var(--vinho);}
+  .dif-ouro p{color:var(--tinta);}
 
   /* ===== DEPOIMENTOS ===== */
   .depoimentos{position:relative;}
@@ -303,7 +326,7 @@
   .galeria-grid{columns:2 240px;column-gap:12px;margin-top:8px;}
   @media(min-width:720px){.galeria-grid{columns:3 240px;}}
   @media(min-width:1000px){.galeria-grid{columns:4 240px;}}
-  .galeria-item{break-inside:avoid;margin-bottom:12px;overflow:hidden;border:1px solid var(--line);border-radius:2px;background:var(--creme);}
+  .galeria-item{break-inside:avoid;margin-bottom:12px;overflow:hidden;border:1px solid var(--line);border-radius:22px;background:var(--creme);}
   .galeria-item img{display:block;width:100%;height:auto;transition:transform .4s ease;}
   .galeria-item:hover img{transform:scale(1.045);}
 
@@ -384,10 +407,10 @@
       <h2 style="color:var(--creme);">Alcateia Delas é pra você.</h2>
     </div>
     <div class="quem-list">
-      <div class="quem-item"><p>Que sente que já <b>podia estar mais longe</b> do que está, mas insegurança, falta de rede ou de repertório segura o passo.</p></div>
-      <div class="quem-item"><p>Que empreende, é autônoma ou pensa em dar esse salto, mas sente falta de <b>gente que entenda</b> essa jornada e que te apoie a seguir.</p></div>
-      <div class="quem-item"><p>Que quer <b>pertencer a algo</b>, fazer conexões reais e sair da rotina.</p></div>
-      <div class="quem-item"><p>Que está disposta a se colocar em movimento, mesmo que isso signifique <b>sair da zona de conforto</b> e que entende a importância que isso tem para a sua evolução.</p></div>
+      <div class="quem-item quem-vinho"><p>Que sente que já <b>podia estar mais longe</b> do que está, mas insegurança, falta de rede ou de repertório segura o passo.</p></div>
+      <div class="quem-item quem-coral"><p>Que empreende, é autônoma ou pensa em dar esse salto, mas sente falta de <b>gente que entenda</b> essa jornada e que te apoie a seguir.</p></div>
+      <div class="quem-item quem-ouro"><p>Que quer <b>pertencer a algo</b>, fazer conexões reais e sair da rotina.</p></div>
+      <div class="quem-item quem-profundo"><p>Que está disposta a se colocar em movimento, mesmo que isso signifique <b>sair da zona de conforto</b> e que entende a importância que isso tem para a sua evolução.</p></div>
     </div>
   </div>
 </section>
@@ -436,17 +459,17 @@
       <div class="agenda-panel">
         <span class="eyebrow">Agenda 2026</span>
         <div class="agenda-grid">
-          <div class="agenda-col">
+          <div class="agenda-col agenda-mes-vinho">
             <div class="agenda-month">Out.</div>
             <div class="agenda-ev"><span class="tag">Presencial · 08/10</span><p>Convidada especial</p></div>
             <div class="agenda-ev"><span class="tag online">Online · 22/10</span><p>Oficina de pitch</p></div>
           </div>
-          <div class="agenda-col">
+          <div class="agenda-col agenda-mes-coral">
             <div class="agenda-month">Nov.</div>
             <div class="agenda-ev"><span class="tag">Presencial · 12/11</span><p>Automake</p></div>
             <div class="agenda-ev"><span class="tag online">Online · 26/11</span><p>Dominando stories</p></div>
           </div>
-          <div class="agenda-col">
+          <div class="agenda-col agenda-mes-ouro">
             <div class="agenda-month">Dez.</div>
             <div class="agenda-ev"><span class="tag">Presencial · 10/12</span><p>Oficina de cookies — especial de Natal</p></div>
             <div class="agenda-ev"><span class="tag online">Online · 08/12</span><p>Finanças</p></div>
@@ -467,17 +490,17 @@
       <h2 style="color:var(--creme);">O objetivo aqui é que você se torne a protagonista da sua história, por isso, você aprende e é encorajada a pôr em prática, nos encontros e na vida.</h2>
     </div>
     <div class="dif-grid">
-      <div class="dif-item">
+      <div class="dif-item dif-vinho">
         <span class="num">01</span>
         <h3>Experiência prática</h3>
         <p>Cada encontro é uma vivência prática — uma oficina, uma troca real — conteúdo que você absorve e coloca no dia-a-dia.</p>
       </div>
-      <div class="dif-item">
+      <div class="dif-item dif-coral">
         <span class="num">02</span>
         <h3>Ouvida e impulsionada</h3>
         <p>Metodologia própria, pensada para desenvolvimento pessoal e profissional caminharem juntos, sempre com intenção.</p>
       </div>
-      <div class="dif-item">
+      <div class="dif-item dif-ouro">
         <span class="num">03</span>
         <h3>Pertencimento de verdade</h3>
         <p>Não é um evento isolado — é uma rede de mulheres que se apoiam e crescem juntas, encontro após encontro.</p>
